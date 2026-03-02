@@ -9,6 +9,8 @@ A curated list of awesome open-source AI agents, assistants, and frameworks in t
   - [Frameworks & Core](#frameworks--core)
   - [Mobile & Portable](#mobile--portable)
   - [Lightweight & Fast](#lightweight--fast)
+  - [Security Focused](#security-focused)
+- [Comparison](#comparison)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -35,6 +37,9 @@ A modular and extensible implementation focusing on specialized skill sets and p
 A high-performance implementation designed for efficiency and speed.
 - **Highlights**: Focuses on minimal latency and low-resource consumption.
 
+#### [Moltworker](https://github.com/moltworker/moltworker)
+A cloud-native variant designed specifically for deployment on Cloudflare.
+
 ---
 
 ### Mobile & Portable
@@ -43,13 +48,32 @@ A high-performance implementation designed for efficiency and speed.
 The bridge to mobile autonomy. Designed to bring the Claw experience to Android and other portable environments.
 - **Highlights**: Bundled Linux environments, non-root execution, and seamless mobile assistant capabilities.
 
+#### [PicoClaw](https://github.com/picoclaw/picoclaw)
+An ultra-portable agent written in Go, optimized for Raspberry Pi and RISC-V platforms.
+
 ---
 
 ### Lightweight & Fast
 
 #### [NanoClaw](https://github.com/qwibitai/nanoclaw)
 An ultra-lightweight and secure alternative focusing on containerization.
-- **Highlights**: Small binary footprint, Linux container isolation for agents, and a "security-first" approach to autonomous tasks.
+- **Highlights**: Small binary footprint, Linux container isolation for agents, and a "security-first" approach.
+
+#### [Nanobot](https://github.com/nanobot-ai/nanobot)
+A minimalist Python-based agent (99% smaller than the original) focusing on core task execution.
+
+---
+
+### Security Focused
+
+#### [IronClaw](https://github.com/near-ai/ironclaw)
+A Rust-based implementation from NEAR AI focusing on WASM sandboxing and capability-based security.
+
+---
+
+## Comparison
+
+For a detailed multi-dimensional technical comparison, see [COMPARISON.md](./COMPARISON.md).
 
 ---
 
