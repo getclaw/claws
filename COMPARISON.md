@@ -1,31 +1,37 @@
-# Claws Technical Comparison
+# 📊 Claws Technical Comparison
 
-A multi-dimensional comparison of the "Claw" family of autonomous AI agents.
+A multi-dimensional comparison of the "Claw" family of autonomous AI agents, designed to help developers and users choose the right framework for their needs.
 
-| Feature | OpenClaw | PaeanClaw | ZeroClaw | NanoClaw | PicoClaw | IronClaw |
+## Quick Reference Matrix
+
+| Feature | OpenClaw | PaeanClaw | 0Claw / ZeroClaw | NanoClaw | PicoClaw | IronClaw |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Language** | TypeScript | TypeScript | Rust | TypeScript | Go | Rust |
-| **Footprint** | Large | Medium | Ultra-Light (<5MB) | Lightweight | Ultra-Light (<10MB) | Medium (Security-focused) |
-| **Runtime** | Node.js | Node.js | Native Binary | Node.js (Agents SDK) | Native Binary | WASM Sandboxed |
-| **Primary Focus** | General Purpose Assistant | MCP & Payments | Performance & Security | Container Isolation | Low-cost Hardware | Capability-based Security |
-| **Messaging** | WhatsApp, Slack, etc. | MCP Interfaces | 22+ Providers | WhatsApp | Telegram, Discord | Enterprise/Security |
-| **Storage** | SQL / Local | SQL / MCP | Encrypted Local | Local | Local | Secure WASM Storage |
+| **Primary Language** | TypeScript | TypeScript | Rust | TypeScript | Go | Rust |
+| **Memory Footprint** | Large (>150MB) | Medium | Ultra-Light (<5MB) | Lightweight | Ultra-Light (<10MB)| Medium |
+| **Execution Runtime**| Node.js | Node.js | Native Binary | Node.js (Containers) | Native Binary | WASM Sandbox |
+| **Primary Focus** | General Assistant | MCP & Payments | Speed & Efficiency | Container Safety | IoT & Edge | Execution Security |
+| **Extensibility** | Custom Skills | MCP Servers | Provider Agnostic | Anthropic SDK | Basic Handlers | Capability system |
+| **Storage Engine** | SQL / Local Files | SQL / MCP | Encrypted Local | Local | Local | Secure WASM FS |
 
-## Multi-dimensional Analysis
+---
 
-### 1. Performance & Efficiency
-- **PicoClaw** & **ZeroClaw** are the clear winners for edge devices, with boot times under 1 second and minimal RAM usage.
-- **OpenClaw** and **PaeanClaw** provide more rich feature sets at the cost of higher resource requirements.
+## Deep Dive Dimensions
+
+### 1. Performance & Hardware Efficiency
+*   🥇 **PicoClaw** & **0Claw (ZeroClaw)** are the undisputed leaders for resource-constrained environments (e.g., Raspberry Pi, cheap VPS). With sub-second boot times and memory usage often peaking under 10MB, they are ideal for "always-on" micro-agents.
+*   **OpenClaw** requires a full Node.js environment and significantly more memory, making it better suited for standard desktop or cloud deployments.
 
 ### 2. Security Architecture
-- **IronClaw** uses WASM sandboxing to prevent memory corruption, making it the most secure for untrusted skills.
-- **NanoClaw** focuses on Linux container isolation for agent execution.
-- **ZeroClaw** provides local encryption of secrets and a full security checklist.
+Executing LLM-generated code locally presents a massive security risk. Different projects handle this differently:
+*   🛡️ **IronClaw (NEAR AI)**: Most secure. Uses WebAssembly (WASM) to strictly sandbox execution, preventing agents from accessing the host filesystem or network without explicit capability grants.
+*   📦 **NanoClaw**: Highly secure. Isolates agent execution within standard Linux containers (Docker/Podman), restricting blast radius.
+*   🔒 **0Claw**: Focuses on data security at rest, providing native local encryption for API keys and secrets.
+*   ⚠️ **OpenClaw**: Historically allowed direct shell access, which requires careful auditing of installed skills.
 
-### 3. Extensibility
-- **PaeanClaw** is optimized for **Model Context Protocol (MCP)**, allowing it to seamlessly integrate with a vast ecosystem of tools.
-- **OpenClaw** relies on its own "Skill" system which is highly mature but less standardized than MCP.
+### 3. Extensibility Standards
+*   🔌 **PaeanClaw**: Leads the pack in adopting the **Model Context Protocol (MCP)**. This allows it to instantly connect to standard tools without custom integration code.
+*   🛠️ **OpenClaw**: Relies on a mature but proprietary "Skill" system (via ClawHub). While there are many skills available, they are specific to this ecosystem.
 
-### 4. Deployment Environment
-- **AnyClaw** is unique in its focus on non-root Android deployment.
-- **Moltworker** provides an interesting approach using Cloudflare Workers for edge deployment.
+### 4. Deployment Environments
+*   📱 **AnyClaw**: Unique focus on un-rooted Android environments, bringing autonomous capabilities directly to smartphones.
+*   ☁️ **Moltworker**: Explores serverless edge execution by targeting Cloudflare Workers, eliminating the need for persistent servers.
